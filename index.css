@@ -1,36 +1,148 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  text-align: center;
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.app {
-  width: 60%;
+/* BODY */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f7f5f0;
+  color: #1a1a1a;
+}
+
+/* MAIN CONTAINER */
+.app-container {
+  max-width: 800px;
   margin: auto;
-  padding-top: 40px;
+  padding: 30px 20px;
 }
 
-input {
-  padding: 10px;
-  width: 60%;
+/* HEADER */
+header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
 }
 
-button {
-  padding: 10px;
-  background: orange;
-  border: none;
+/* TITLE */
+header h1 {
+  font-weight: normal;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: #666;
+  font-size: 28px;
+}
+
+/* SEARCH BOX */
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* INPUT */
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* BUTTON */
+.search-box button {
+  padding: 12px 20px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.search-box button:hover {
+  background: #eee;
+}
+
+/* DISPLAY AREA */
+#displayArea {
+  margin-top: 30px;
+  background: white;
+  padding: 30px;
+  border: 1px solid #ddd;
+  min-height: 150px;
+}
+
+/* WELCOME TEXT */
+#welcomeMessage {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* WORD ENTRY (for JS injection) */
+.word-title {
+  font-size: 40px;
+  font-weight: normal;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+}
+
+.phonetic {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* SECTION STYLE */
+.definition-section {
+  margin-top: 25px;
+}
+
+.definition-section h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  color: #333;
+}
+
+.definition-section p {
+  margin-top: 10px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* FAVORITES */
+.favorites-section {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.favorites-section h3 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+#favoritesList {
+  list-style: none;
+}
+
+#favoritesList li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
 }
 
-#result {
-  margin-top: 20px;
-  padding: 20px;
-  background: #222;
-  border-radius: 10px;
-}
-
-#error {
-  color: red;
+#favoritesList li:hover {
+  text-decoration: underline;
 }

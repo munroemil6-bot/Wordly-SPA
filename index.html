@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wordly Dictionary</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordly | Interactive Dictionary</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="app-container">
+        <header>
+            <h1>Wordly <span>Dictionary</span></h1>
+            <div class="search-box">
+                <input type="text" id="wordInput" placeholder="Search for a word...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
 
-  <div class="app">
-    <h1>Wordly Dictionary</h1>
+        <main id="displayArea">
+            <div id="welcomeMessage">
+                <p>Type a word above to start learning!</p>
+            </div>
+        </main>
 
-    <form id="searchForm">
-      <input type="text" id="wordInput" placeholder="Search a word..." />
-      <button type="submit">Search</button>
-    </form>
-
-    <p id="error"></p>
-
-    <div id="result">
-      <h2 id="word"></h2>
-      <p id="phonetic"></p>
-
-      <audio id="audio" controls></audio>
-
-      <p id="definition"></p>
-      <p id="example"></p>
-      <p id="synonyms"></p>
+        <section class="favorites-section">
+            <h3>Saved Words</h3>
+            <ul id="favoritesList"></ul>
+        </section>
     </div>
-
-  </div>
-
-  <script src="app.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
